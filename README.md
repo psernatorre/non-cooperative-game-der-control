@@ -1,8 +1,8 @@
 # Non-cooperative-Game-to-Control-Learned-Inverter-Dynamics-of-Distributed-Energy-Resources
 
-This repository provides the input dataset, control block diagrams, and scenarios used in the paper.
-The Simulink files related to the FlexPower plant are not shared since they belong to Sandia. You may contact them if you want them.
+This repository provides the input dataset, control block diagrams, and scenarios used in the paper:
 
-We will share the files soon.
+[1] Paul Serna-Torre, Vishal Shenoy, David Schoenwald, Jorge I. Poveda, Patricia Hidalgo-Gonzalez . "Non-cooperative games to control learned inverter dynamics of distributed energy resources". Electric Power Systems Research, 2024.
 
-Thank you.
+This repository contains the learned state-space models of the inverters we use in this paper. The electromagnetic-transient (EMT) models of the inverters are not shared in this repository as they belong to Sandia National Laboratories. We used these inverter models during the elaboration of this paper. We are grateful for this collaboration with David (Sandia National Laboratories). 
+

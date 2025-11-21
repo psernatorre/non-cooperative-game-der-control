@@ -1,0 +1,49 @@
+
+Files:
+a. state_space.m 
+   It has the state-space representations of the DERs (e.g. PV1 system, BESS1, etc). Kalman Filter plus LTR are also calculated for each DER. 
+   The kalman filter plus LTR are later used for the Nash equilibrium controller computation. The reason why it is necessary to use KF plus LTR
+   is because System Identification framework creates new states which are fictitious.
+   
+   It also has the state-space representation of the combined system (DERs). It is necessary for game purposes.
+   
+   It has the initial conditions such as PV1 output power, and initial load.
+   
+   It has the references for which the system will be subjected to. For example, the power regulation request that the entire system must comply.
+   
+   Some load perturbations are also included.
+   
+b. controllers.m
+   It computes the Nash equilibrium controllers following the rules of a non-cooperative games.
+   It also provides droop controllers which are ones to be benchmarked.
+   
+c. simulation_config.m
+   It sets up the parameters and run the model and grid simulation for both NE controllers and droop controllers.
+   You may comment lines if you only want to run one simulation.
+   
+d. droop_model.slx
+   State-space models with droop controllers.
+ 
+e. droop_grid.slx
+   High fidelity models (realistic DERs) with droop controllers.
+    
+f. nasheq_model.slx
+   State-space models with NE controllers.
+ 
+g. nasheq_grid.slx
+   High fidelity models (realistic DERs) with NE controllers.
+   
+h. cost_analysis.slx
+   Compute the individual performance metric for each player of the deviation system.
+   The individual performance metric can be computed for different controllers used in the simulink files. For example: NE controller vs Droop controller.
+   In this case, it makes sense to compare the results from droop_grid.slx and nasheq_grid.slx
+   
+Instructions:
+
+1. Run state_space.m 
+
+2. Run controllers.m
+
+3. Run simulation_config.m
+
+4. Run cost_analysis.m
